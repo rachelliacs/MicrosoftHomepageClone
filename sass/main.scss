@@ -1,5 +1,10 @@
+@import "abstract/mixins";
+@import "abstract/variables";
 @import "base/base";
 @import "base/typography";
+@import "components/carbon";
+@import "components/follow";
+@import "components/footer";
 @import "components/home-cards";
 @import "components/showcase";
 @import "components/xbox";

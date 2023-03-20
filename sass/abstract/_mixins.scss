@@ -1,0 +1,37 @@
+/* 
+0       - 600       = Phone Small                           phone-s
+600     - 900       = Phone Large                           phone-l
+900     - 1200      = Tablet                                tab
+[1200   - 1800]     = Our normal style will applied here    
+1800    +           = Big Destop                            big-desk
+*/
+
+// 1em = 16px
+
+@mixin respondsive ($breakpoint) {
+    @if $breakpoint == phone-xs {
+        @media only screen and (max-width: 30em) {     // 600px/16px
+            @content
+        };
+    }
+    @if $breakpoint == phone-s {
+        @media only screen and (max-width: 40em) {     // 600px/16px
+            @content
+        };
+    }
+    @if $breakpoint == phone-l {
+        @media only screen and (max-width: 60em) {     // 900px/16px
+            @content
+        };
+    }
+    @if $breakpoint == tab {
+        @media only screen and (max-width: 80em) {    // 1200px/16px
+            @content
+        };
+    }
+    @if $breakpoint == big-desk {
+        @media only screen and (min-width: 120em) {    // 1800px/16px
+            @content
+        };
+    }
+}
